@@ -11,6 +11,11 @@
         <item>Retired</item>
         <item>Children</item>
     </string-array>
+    <string-array name="time">
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
+    </string-array>
     <string name="text">No order</string>
     <string name="button">Place order</string>
 </resources>

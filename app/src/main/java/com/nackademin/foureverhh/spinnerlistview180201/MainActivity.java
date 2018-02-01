@@ -9,14 +9,15 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;  //Declare a text view
-    Spinner tickets;    //Declare a spinner
+    Spinner tickets,times;    //Declare a spinner
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.text);  //initialize the text view object
-        tickets  = findViewById(R.id.spinner); //initialize the spinner object
+        tickets  = findViewById(R.id.spinnerTicket); //initialize the spinner object
+        times =findViewById(R.id.spinnerTime);
     }
 
     public void order(View view)
@@ -24,8 +25,11 @@ public class MainActivity extends AppCompatActivity {
         //Through getResource().getStringArray(R.array.tickets) to get the tickets array in XML
         String[] ticketType = getResources().getStringArray(R.array.tickets);
         //through getSelectedItemPosition() to get the selected item in the spinner
-        int index = tickets.getSelectedItemPosition();
+        int idxTicket = tickets.getSelectedItemPosition();
 
-        textView.setText("Order the kind of "+ticketType[index]+" tickets");
+        String[] ticketTime =getResources().getStringArray(R.array.time);
+        int idxTime = times.getSelectedItemPosition();
+
+        textView.setText("Order the kind of "+ticketType[idxTicket]+" and "+ticketTime[idxTime]+" tickets");
     }
 }
