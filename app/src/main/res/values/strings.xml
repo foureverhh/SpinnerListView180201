@@ -1,21 +1,37 @@
 <resources>
     <string name="app_name">Spinner&amp;ListView180201</string>
+
     <string-array name="seasons">
         <item>Spring</item>
         <item>Summer</item>
         <item>Autumn</item>
         <item>Winter</item>
     </string-array>
+
     <string-array name="tickets">
         <item>Adult</item>
         <item>Retired</item>
         <item>Children</item>
     </string-array>
+
     <string-array name="time">
         <item>Morning</item>
         <item>Afternoon</item>
         <item>Evening</item>
     </string-array>
+
+    <string-array name="sport">
+        <item>Walk</item>
+        <item>Running</item>
+        <item>Swimming</item>
+    </string-array>
+
+    <string name="weight">Weight</string>
+    <string name="timeSpan">Time</string>
+    <string name="calc">Calculate</string>
+    <string name="total">Total:</string>
+    <string name="txvRate">Energy consumption:</string>
+
     <string name="text">No order</string>
     <string name="button">Place order</string>
 </resources>

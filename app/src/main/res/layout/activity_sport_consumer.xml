@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nackademin.foureverhh.spinnerlistview180201.SportConsumer">
+    <Spinner
+        android:id="@+id/spinnerSport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/sport"
+        android:spinnerMode="dialog"></Spinner>
+    <LinearLayout
+        android:id="@+id/Linear1"
+        android:background="#AAA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerSport">
+
+        <TextView
+            android:id="@+id/txvRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txvRate" />
+    </LinearLayout>
+    <LinearLayout
+       android:layout_below="@id/Linear1"
+        android:id="@+id/Linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/weight"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/Linear2"
+        android:id="@+id/Linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/timeSpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/timeSpan"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+    <Button
+        android:layout_below="@id/Linear3"
+        android:id="@+id/calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/calc"
+        android:onClick="calc"/>
+    <TextView
+        android:layout_below="@id/calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/total"
+        android:text="@string/total"
+        android:textSize="45sp"
+        android:gravity="center_horizontal"/>
+</RelativeLayout>

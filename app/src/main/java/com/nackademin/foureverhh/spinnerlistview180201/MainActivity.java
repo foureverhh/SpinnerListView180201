@@ -1,15 +1,18 @@
 package com.nackademin.foureverhh.spinnerlistview180201;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     TextView textView;  //Declare a text view
     Spinner tickets,times;    //Declare a spinner
+    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.text);  //initialize the text view object
         tickets  = findViewById(R.id.spinnerTicket); //initialize the spinner object
         times =findViewById(R.id.spinnerTime);
+        textView.setOnClickListener(this);
     }
 
     public void order(View view)
@@ -31,5 +35,14 @@ public class MainActivity extends AppCompatActivity {
         int idxTime = times.getSelectedItemPosition();
 
         textView.setText("Order the kind of "+ticketType[idxTicket]+" and "+ticketTime[idxTime]+" tickets");
+        intent = new Intent(this,SportConsumer.class);
+        startActivity(intent);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        intent = new Intent(this,SportConsumer.class);
+        startActivity(intent);
     }
 }
