@@ -18,12 +18,14 @@ public class SportConsumer extends AppCompatActivity implements AdapterView.OnIt
     TextView total,txvRate;
     Spinner sport;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sport_consumer);
 
         intent = getIntent();
+
 
       weight = findViewById(R.id.weight);
         time  = findViewById(R.id.timeSpan);
@@ -38,6 +40,8 @@ public class SportConsumer extends AppCompatActivity implements AdapterView.OnIt
 
     public void calc (View view)
     {
+        if(weight.getText().length()==0 || time.getText().length()==0)
+            return;
         double w = Double.parseDouble(weight.getText().toString());
         double t = Double.parseDouble(time.getText().toString());
 
@@ -52,7 +56,12 @@ public class SportConsumer extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
         txvRate.setText(String.valueOf(energyConsumption[position]));
+
+       calc(view);
+
+
     }
 
     @Override
