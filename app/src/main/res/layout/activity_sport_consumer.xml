@@ -22,7 +22,6 @@
             android:id="@+id/txvRate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/txvRate" />
     </LinearLayout>
     <LinearLayout
@@ -35,9 +34,8 @@
             android:id="@+id/weight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:hint="@string/weight"
-            android:inputType="numberDecimal"/>
+            android:inputType="numberDecimal" />
     </LinearLayout>
     <LinearLayout
         android:layout_below="@id/Linear2"
@@ -49,9 +47,8 @@
             android:id="@+id/timeSpan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:hint="@string/timeSpan"
-            android:inputType="numberDecimal"/>
+            android:inputType="numberDecimal" />
     </LinearLayout>
     <Button
         android:layout_below="@id/Linear3"
