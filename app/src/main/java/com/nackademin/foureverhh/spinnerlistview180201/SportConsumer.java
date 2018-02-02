@@ -59,8 +59,7 @@ public class SportConsumer extends AppCompatActivity implements AdapterView.OnIt
 
         txvRate.setText(String.valueOf(energyConsumption[position]));
 
-       calc(view);
-
+        calc(view);
 
     }
 

@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SportConsumer"></activity>
+        <activity android:name=".SportConsumer" />
+        <activity android:name=".PlaceOrder" />
+        <activity android:name=".CinemaTicketOrder"></activity>
     </application>
 
 </manifest>
