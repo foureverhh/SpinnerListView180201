@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    TextView textView;  //Declare a text view
+    TextView textView,toCinemaTicket;  //Declare a text view
     Spinner tickets,times;    //Declare a spinner
     Intent intent;
 
@@ -21,7 +21,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textView = findViewById(R.id.text);  //initialize the text view object
         tickets  = findViewById(R.id.spinnerTicket); //initialize the spinner object
         times =findViewById(R.id.spinnerTime);
+
+        //Jump to CinemaTicketOrder Activity
+        toCinemaTicket = findViewById(R.id.toCinemaTicket);
+        toCinemaTicket.setOnClickListener(this);
         textView.setOnClickListener(this);
+
     }
 
     public void order(View view)
@@ -42,7 +47,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        intent = new Intent(this,PlaceOrder.class);
-        startActivity(intent);
+        if(v.getId()==R.id.text)
+        {
+            intent = new Intent(this, PlaceOrder.class);
+            startActivity(intent);
+        }else if(v.getId()==R.id.toCinemaTicket)
+        {
+            intent = new Intent(this,CinemaTicketOrder.class);
+            startActivity(intent);
+        }
     }
 }

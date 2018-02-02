@@ -40,4 +40,11 @@
         android:layout_below="@id/button"
         android:text="@string/text"
         android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/toCinemaTicket"
+        android:layout_below="@+id/text"
+        android:text="@string/toCinemaTicket"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
