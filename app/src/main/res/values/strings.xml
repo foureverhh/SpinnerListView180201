@@ -43,4 +43,12 @@
     <string name="text">No order</string>
     <string name="button">Place order</string>
     <string name="toCinemaTicket">To cinema tickets</string>
+    <string-array name="drinkname">
+        <item>Perl Tea</item>
+        <item>Milk Tea</item>
+        <item>Cold Red Tea</item>
+        <item>Lemon Tea</item>
+    </string-array>
+    <string name="makeOrder">Confirm Order</string>
+
 </resources>

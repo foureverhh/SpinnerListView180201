@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }else if(v.getId()==R.id.toCinemaTicket)
         {
-            intent = new Intent(this,CinemaTicketOrder.class);
+           // intent = new Intent(this,CinemaTicketOrder.class);
+            intent = new Intent(this,ArrayAdapterOrder.class);
             startActivity(intent);
         }
     }

@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".SportConsumer" />
         <activity android:name=".PlaceOrder" />
-        <activity android:name=".CinemaTicketOrder"></activity>
+        <activity android:name=".CinemaTicketOrder" />
+        <activity android:name=".ArrayAdapterOrder"></activity>
     </application>
 
 </manifest>

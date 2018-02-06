@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nackademin.foureverhh.spinnerlistview180201.ArrayAdapterOrder">
+    <Spinner
+        android:id="@+id/drink"
+        android:entries="@array/drinkname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+    <Spinner
+        android:id="@+id/temp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+    <TextView
+        android:id="@+id/makeOrder"
+        android:text="@string/makeOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showOrder"/>
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
